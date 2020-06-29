@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\synthesize">
+      <UniqueIdentifier>{ee130b5c-1d2c-4700-9c82-d1c70bebbddb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\datamanage">
+      <UniqueIdentifier>{845e9d00-5ae1-403d-8f76-4f9baf5b618f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\synthesize">
+      <UniqueIdentifier>{86a94bb1-561a-424e-bfe8-a15abb23d788}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\datamanage">
+      <UniqueIdentifier>{f76d3af5-389f-42ac-a600-b2c590f9af7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\datavoice">
+      <UniqueIdentifier>{926526cb-8ab2-418e-97fb-a364885a1bd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\datavoice">
+      <UniqueIdentifier>{f3920a9b-6744-4def-9267-41120fcc9200}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\tts.synth">
+      <UniqueIdentifier>{e2af65c4-4a3f-4312-adef-376617af37a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tts.synth">
+      <UniqueIdentifier>{b113ceff-1d0b-4982-bf19-adbcf5bb9290}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\engine\ttsbase\synthesize\psp_prosodypredict.cpp">
+      <Filter>Source Files\synthesize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\ttsbase\datamanage\data_datamanager.cpp">
+      <Filter>Source Files\datamanage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\ttsbase\datamanage\data_drivendata.cpp">
+      <Filter>Source Files\datamanage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\ttsbase\datavoice\data_voicedata.cpp">
+      <Filter>Source Files\datavoice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\ttsbase\tts.synth\tts_synthesizer.cpp">
+      <Filter>Source Files\tts.synth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\ttsbase\datamanage\module_manager.cpp">
+      <Filter>Source Files\datamanage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\ttsbase\synthesize\synth_synthesize.cpp">
+      <Filter>Source Files\synthesize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\ttsbase\synthesize\unitseg_unitsegment.cpp">
+      <Filter>Source Files\synthesize</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\engine\ttsbase\synthesize\psp_prosodypredict.h">
+      <Filter>Header Files\synthesize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttsbase\datamanage\base_module.h">
+      <Filter>Header Files\datamanage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttsbase\datamanage\base_ttsdocument.h">
+      <Filter>Header Files\datamanage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttsbase\datamanage\data_datamanager.h">
+      <Filter>Header Files\datamanage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttsbase\datamanage\data_drivendata.h">
+      <Filter>Header Files\datamanage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttsbase\datavoice\splib_phonemeset.h">
+      <Filter>Header Files\datavoice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttsbase\datavoice\splib_speechlib.h">
+      <Filter>Header Files\datavoice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttsbase\datavoice\data_voicedata.h">
+      <Filter>Header Files\datavoice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttsbase\tts.synth\tts_synthesizer.h">
+      <Filter>Header Files\tts.synth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttsbase\datamanage\module_manager.h">
+      <Filter>Header Files\datamanage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttsbase\datamanage\base_moduleapi.h">
+      <Filter>Header Files\datamanage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttsbase\synthesize\synth_synthesize.h">
+      <Filter>Header Files\synthesize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttsbase\synthesize\unitseg_unitsegment.h">
+      <Filter>Header Files\synthesize</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

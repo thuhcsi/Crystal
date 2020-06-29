@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\cmn">
+      <UniqueIdentifier>{601105a1-6e5f-4af2-b945-31ecf0855d5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils">
+      <UniqueIdentifier>{5a8cf981-e182-471c-82a1-a9c9b952788f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\xml">
+      <UniqueIdentifier>{79d5eab9-e291-4210-b611-5e5db3e755d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\dsp">
+      <UniqueIdentifier>{b221fa15-0ce6-4843-aa8e-5bde6fb71a76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\cmn">
+      <UniqueIdentifier>{286d33e6-68ab-4cf8-9632-942dd00c9a2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\utils">
+      <UniqueIdentifier>{e24ae50d-14ae-42cc-9e6b-372dc6dcd9c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\xml">
+      <UniqueIdentifier>{8be49423-ffb3-4298-a6ce-44488bbfd55b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\dsp">
+      <UniqueIdentifier>{26d4938d-9b73-4011-9340-07d8bf6dc406}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\engine\csttools\cmn\cmn_file.cpp">
+      <Filter>Source Files\cmn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\csttools\cmn\cmn_string.cpp">
+      <Filter>Source Files\cmn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\csttools\cmn\cmn_textfile.cpp">
+      <Filter>Source Files\cmn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\csttools\utils\utl_bigram.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\csttools\utils\utl_chineseconv.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\csttools\utils\utl_pinyin.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\csttools\utils\utl_regexp.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\csttools\utils\utl_string.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\csttools\utils\utl_viterbi.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\csttools\utils\utl_wagontree.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\csttools\xml\ssml_document.cpp">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\csttools\xml\ssml_helper.cpp">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\csttools\xml\ssml_traversal.cpp">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\csttools\xml\xml_dom.cpp">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\csttools\xml\xml_sax.cpp">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\csttools\dsp\dsp_databuffer.cpp">
+      <Filter>Source Files\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\csttools\dsp\dsp_dspalgorithm.cpp">
+      <Filter>Source Files\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\csttools\dsp\dsp_wavedata.cpp">
+      <Filter>Source Files\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\csttools\dsp\dsp_wavedevice.cpp">
+      <Filter>Source Files\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\csttools\dsp\dsp_wavefile.cpp">
+      <Filter>Source Files\dsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\csttools\dsp\dsp_waveplay.cpp">
+      <Filter>Source Files\dsp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\engine\csttools\cmn\cmn_error.h">
+      <Filter>Header Files\cmn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\csttools\cmn\cmn_file.h">
+      <Filter>Header Files\cmn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\csttools\cmn\cmn_hashmap.h">
+      <Filter>Header Files\cmn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\csttools\cmn\cmn_stack.h">
+      <Filter>Header Files\cmn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\csttools\cmn\cmn_string.h">
+      <Filter>Header Files\cmn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\csttools\cmn\cmn_textfile.h">
+      <Filter>Header Files\cmn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\csttools\cmn\cmn_type.h">
+      <Filter>Header Files\cmn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\csttools\cmn\cmn_vector.h">
+      <Filter>Header Files\cmn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\csttools\utils\utl_bigram.h">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\csttools\utils\utl_chineseconv.h">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\csttools\utils\utl_pinyin.h">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\csttools\utils\utl_regexp.h">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\csttools\utils\utl_string.h">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\csttools\utils\utl_viterbi.h">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\csttools\utils\utl_wagontree.h">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\csttools\xml\ssml_document.h">
+      <Filter>Header Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\csttools\xml\ssml_helper.h">
+      <Filter>Header Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\csttools\xml\ssml_traversal.h">
+      <Filter>Header Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\csttools\xml\xml_dom.h">
+      <Filter>Header Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\csttools\xml\xml_sax.h">
+      <Filter>Header Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\csttools\dsp\dsp_databuffer.h">
+      <Filter>Header Files\dsp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\csttools\dsp\dsp_dspalgorithm.h">
+      <Filter>Header Files\dsp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\csttools\dsp\dsp_wavedata.h">
+      <Filter>Header Files\dsp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\csttools\dsp\dsp_wavedevice.h">
+      <Filter>Header Files\dsp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\csttools\dsp\dsp_wavefile.h">
+      <Filter>Header Files\dsp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\csttools\dsp\dsp_waveplay.h">
+      <Filter>Header Files\dsp</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

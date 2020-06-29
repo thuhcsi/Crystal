@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1CAC5B51-67FF-410A-87AD-B96F613761E1}</ProjectGuid>
+    <RootNamespace>CSTTools</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)..\..\binary\$(Platform).$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\..\binary\$(Platform).$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)..\..\binary\object\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\..\binary\object\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)..\..\binary\$(Platform).$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\..\binary\$(Platform).$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)..\..\binary\object\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\..\binary\object\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">cst</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cst</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cst</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cst</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\engine\csttools\;$(SolutionDir)..\..\depends\HKSCS-2004\inc\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\engine\csttools\;$(SolutionDir)..\..\depends\HKSCS-2004\inc\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\engine\csttools\;$(SolutionDir)..\..\depends\HKSCS-2004\inc\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\engine\csttools\;$(SolutionDir)..\..\depends\HKSCS-2004\inc\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\engine\csttools\cmn\cmn_file.cpp" />
+    <ClCompile Include="..\..\..\engine\csttools\cmn\cmn_string.cpp" />
+    <ClCompile Include="..\..\..\engine\csttools\cmn\cmn_textfile.cpp" />
+    <ClCompile Include="..\..\..\engine\csttools\utils\utl_bigram.cpp" />
+    <ClCompile Include="..\..\..\engine\csttools\utils\utl_chineseconv.cpp" />
+    <ClCompile Include="..\..\..\engine\csttools\utils\utl_pinyin.cpp" />
+    <ClCompile Include="..\..\..\engine\csttools\utils\utl_regexp.cpp" />
+    <ClCompile Include="..\..\..\engine\csttools\utils\utl_string.cpp" />
+    <ClCompile Include="..\..\..\engine\csttools\utils\utl_viterbi.cpp" />
+    <ClCompile Include="..\..\..\engine\csttools\utils\utl_wagontree.cpp" />
+    <ClCompile Include="..\..\..\engine\csttools\xml\ssml_document.cpp" />
+    <ClCompile Include="..\..\..\engine\csttools\xml\ssml_helper.cpp" />
+    <ClCompile Include="..\..\..\engine\csttools\xml\ssml_traversal.cpp" />
+    <ClCompile Include="..\..\..\engine\csttools\xml\xml_dom.cpp" />
+    <ClCompile Include="..\..\..\engine\csttools\xml\xml_sax.cpp" />
+    <ClCompile Include="..\..\..\engine\csttools\dsp\dsp_databuffer.cpp" />
+    <ClCompile Include="..\..\..\engine\csttools\dsp\dsp_dspalgorithm.cpp" />
+    <ClCompile Include="..\..\..\engine\csttools\dsp\dsp_wavedata.cpp" />
+    <ClCompile Include="..\..\..\engine\csttools\dsp\dsp_wavedevice.cpp" />
+    <ClCompile Include="..\..\..\engine\csttools\dsp\dsp_wavefile.cpp" />
+    <ClCompile Include="..\..\..\engine\csttools\dsp\dsp_waveplay.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\engine\csttools\cmn\cmn_error.h" />
+    <ClInclude Include="..\..\..\engine\csttools\cmn\cmn_file.h" />
+    <ClInclude Include="..\..\..\engine\csttools\cmn\cmn_hashmap.h" />
+    <ClInclude Include="..\..\..\engine\csttools\cmn\cmn_stack.h" />
+    <ClInclude Include="..\..\..\engine\csttools\cmn\cmn_string.h" />
+    <ClInclude Include="..\..\..\engine\csttools\cmn\cmn_textfile.h" />
+    <ClInclude Include="..\..\..\engine\csttools\cmn\cmn_type.h" />
+    <ClInclude Include="..\..\..\engine\csttools\cmn\cmn_vector.h" />
+    <ClInclude Include="..\..\..\engine\csttools\utils\utl_bigram.h" />
+    <ClInclude Include="..\..\..\engine\csttools\utils\utl_chineseconv.h" />
+    <ClInclude Include="..\..\..\engine\csttools\utils\utl_pinyin.h" />
+    <ClInclude Include="..\..\..\engine\csttools\utils\utl_regexp.h" />
+    <ClInclude Include="..\..\..\engine\csttools\utils\utl_string.h" />
+    <ClInclude Include="..\..\..\engine\csttools\utils\utl_viterbi.h" />
+    <ClInclude Include="..\..\..\engine\csttools\utils\utl_wagontree.h" />
+    <ClInclude Include="..\..\..\engine\csttools\xml\ssml_document.h" />
+    <ClInclude Include="..\..\..\engine\csttools\xml\ssml_helper.h" />
+    <ClInclude Include="..\..\..\engine\csttools\xml\ssml_traversal.h" />
+    <ClInclude Include="..\..\..\engine\csttools\xml\xml_dom.h" />
+    <ClInclude Include="..\..\..\engine\csttools\xml\xml_sax.h" />
+    <ClInclude Include="..\..\..\engine\csttools\dsp\dsp_databuffer.h" />
+    <ClInclude Include="..\..\..\engine\csttools\dsp\dsp_dspalgorithm.h" />
+    <ClInclude Include="..\..\..\engine\csttools\dsp\dsp_wavedata.h" />
+    <ClInclude Include="..\..\..\engine\csttools\dsp\dsp_wavedevice.h" />
+    <ClInclude Include="..\..\..\engine\csttools\dsp\dsp_wavefile.h" />
+    <ClInclude Include="..\..\..\engine\csttools\dsp\dsp_waveplay.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

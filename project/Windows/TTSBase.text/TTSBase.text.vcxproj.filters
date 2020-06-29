@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\preprocess">
+      <UniqueIdentifier>{0c692948-13f3-42cf-9074-4c9e763967c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\textparse">
+      <UniqueIdentifier>{e298955d-af77-4dd5-88c0-a633f7badb9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\datamanage">
+      <UniqueIdentifier>{845e9d00-5ae1-403d-8f76-4f9baf5b618f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\preprocess">
+      <UniqueIdentifier>{64112eed-7ad5-4398-b973-817675c1b6de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\textparse">
+      <UniqueIdentifier>{0809d2c7-06a7-49d1-9275-d680a7bd18e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\datamanage">
+      <UniqueIdentifier>{f76d3af5-389f-42ac-a600-b2c590f9af7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\datatext">
+      <UniqueIdentifier>{cbee2ae4-b1c9-4eb9-ac5b-023bb549a1b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\datatext">
+      <UniqueIdentifier>{4e8181ea-5e0a-48a9-97d1-2cb4c1b20abb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\tts.text">
+      <UniqueIdentifier>{5fde6962-8ce9-4509-af7c-a4ec647c7b01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tts.text">
+      <UniqueIdentifier>{85e70795-c570-4e59-8ee9-c8e01f62d572}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\engine\ttsbase\preprocess\dsa_docstruct.cpp">
+      <Filter>Source Files\preprocess</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\ttsbase\preprocess\dsa_langdetect.cpp">
+      <Filter>Source Files\preprocess</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\ttsbase\preprocess\dsa_symboldetect.cpp">
+      <Filter>Source Files\preprocess</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\ttsbase\preprocess\dsa_textsegment.cpp">
+      <Filter>Source Files\preprocess</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\ttsbase\preprocess\lang_langconvert.cpp">
+      <Filter>Source Files\preprocess</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\ttsbase\preprocess\prep_preprocess.cpp">
+      <Filter>Source Files\preprocess</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\ttsbase\textparse\gtp_grapheme2phoneme.cpp">
+      <Filter>Source Files\textparse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\ttsbase\textparse\norm_textnormalize.cpp">
+      <Filter>Source Files\textparse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\ttsbase\textparse\psg_prosstructgen.cpp">
+      <Filter>Source Files\textparse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\ttsbase\textparse\wdseg_wordsegment.cpp">
+      <Filter>Source Files\textparse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\ttsbase\datamanage\data_datamanager.cpp">
+      <Filter>Source Files\datamanage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\ttsbase\datamanage\data_drivendata.cpp">
+      <Filter>Source Files\datamanage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\ttsbase\datatext\lexicon_lexicon.cpp">
+      <Filter>Source Files\datatext</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\ttsbase\datatext\data_textdata.cpp">
+      <Filter>Source Files\datatext</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\ttsbase\tts.text\tts_textparser.cpp">
+      <Filter>Source Files\tts.text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\ttsbase\datamanage\module_manager.cpp">
+      <Filter>Source Files\datamanage</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\engine\ttsbase\preprocess\dsa_docstruct.h">
+      <Filter>Header Files\preprocess</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttsbase\preprocess\dsa_langdetect.h">
+      <Filter>Header Files\preprocess</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttsbase\preprocess\dsa_symboldetect.h">
+      <Filter>Header Files\preprocess</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttsbase\preprocess\dsa_textsegment.h">
+      <Filter>Header Files\preprocess</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttsbase\preprocess\lang_langconvert.h">
+      <Filter>Header Files\preprocess</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttsbase\preprocess\prep_preprocess.h">
+      <Filter>Header Files\preprocess</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttsbase\textparse\gtp_grapheme2phoneme.h">
+      <Filter>Header Files\textparse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttsbase\textparse\norm_textnormalize.h">
+      <Filter>Header Files\textparse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttsbase\textparse\psg_prosstructgen.h">
+      <Filter>Header Files\textparse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttsbase\textparse\wdseg_wordsegment.h">
+      <Filter>Header Files\textparse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttsbase\datamanage\base_module.h">
+      <Filter>Header Files\datamanage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttsbase\datamanage\base_ttsdocument.h">
+      <Filter>Header Files\datamanage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttsbase\datamanage\data_datamanager.h">
+      <Filter>Header Files\datamanage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttsbase\datamanage\data_drivendata.h">
+      <Filter>Header Files\datamanage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttsbase\datatext\lexicon_lexicon.h">
+      <Filter>Header Files\datatext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttsbase\datatext\data_textdata.h">
+      <Filter>Header Files\datatext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttsbase\tts.text\tts_textparser.h">
+      <Filter>Header Files\tts.text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttsbase\datamanage\module_manager.h">
+      <Filter>Header Files\datamanage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttsbase\datamanage\base_moduleapi.h">
+      <Filter>Header Files\datamanage</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>
