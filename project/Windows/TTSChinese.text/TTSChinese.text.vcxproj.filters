@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\textparse">
+      <UniqueIdentifier>{45455b16-c7a4-424e-a083-eb912dbe2f5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\textparse">
+      <UniqueIdentifier>{6306843c-0349-4068-b77a-378b8f52e0a9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\engine\ttschinese\textparse\tts_textparser.cpp">
+      <Filter>Source Files\textparse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\ttschinese\textparse\data_textdata.cpp">
+      <Filter>Source Files\textparse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\ttschinese\textparse\lexicon_data.cpp">
+      <Filter>Source Files\textparse</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\engine\ttschinese\textparse\tts_textparser.h">
+      <Filter>Header Files\textparse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttschinese\textparse\data_textdata.h">
+      <Filter>Header Files\textparse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttschinese\textparse\lexicon_data.h">
+      <Filter>Header Files\textparse</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

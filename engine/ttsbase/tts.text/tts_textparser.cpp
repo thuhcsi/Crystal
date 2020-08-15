@@ -88,6 +88,7 @@ namespace cst
 
                 ///@todo log used modules
                 {
+                    std::wcout << str::mbstowcs(modules["CTextData"].name) << std::endl;
                     std::wcout << L"cst::tts::base::CPreProcess" << std::endl;
                     std::wcout << L"cst::tts::base::CLangConvert" << std::endl;
                     std::wcout << str::mbstowcs(modules["CTextSegment"].name) << std::endl;

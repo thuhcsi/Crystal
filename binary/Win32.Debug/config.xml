@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <modules xml:lang="zh-cmn">
-  <dlib1 file="crystal.text.dll" />
-  <dlib1 file="crystal.synth.dll" />
+  <dlib file="zh.text.dll" />
+  <dlib file="zh.hts.dll" />
   <textdata path="..\..\data\putonghua\text" loaddata="true" />
   <voicedata path="..\..\data\putonghua\hts" />
 </modules>

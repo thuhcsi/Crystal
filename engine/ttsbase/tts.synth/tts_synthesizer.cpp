@@ -78,6 +78,7 @@ namespace cst
 
                 ///@todo log used modules
                 {
+                    std::wcout << str::mbstowcs(modules["CVoiceData"].name) << std::endl;
                     std::wcout << str::mbstowcs(modules["CUnitSegment"].name) << std::endl;
                     std::wcout << str::mbstowcs(modules["CProsodyPredict"].name) << std::endl;
                     std::wcout << str::mbstowcs(modules["CSynthesize"].name) << std::endl;

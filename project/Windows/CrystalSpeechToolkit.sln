@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TTSBase.synth", "TTSBase.sy
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TTSBase.synth.concat", "TTSBase.synth.concat\TTSBase.synth.concat.vcxproj", "{7B655B60-A551-4A91-AEF7-E7CC417A37DC}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TTSChinese.text", "TTSChinese.text\TTSChinese.text.vcxproj", "{3DCA1B50-E4B4-4052-A5C8-1B7495794137}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -59,6 +61,14 @@ Global
 		{7B655B60-A551-4A91-AEF7-E7CC417A37DC}.Release|Win32.Build.0 = Release|Win32
 		{7B655B60-A551-4A91-AEF7-E7CC417A37DC}.Release|x64.ActiveCfg = Release|x64
 		{7B655B60-A551-4A91-AEF7-E7CC417A37DC}.Release|x64.Build.0 = Release|x64
+		{3DCA1B50-E4B4-4052-A5C8-1B7495794137}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3DCA1B50-E4B4-4052-A5C8-1B7495794137}.Debug|Win32.Build.0 = Debug|Win32
+		{3DCA1B50-E4B4-4052-A5C8-1B7495794137}.Debug|x64.ActiveCfg = Debug|x64
+		{3DCA1B50-E4B4-4052-A5C8-1B7495794137}.Debug|x64.Build.0 = Debug|x64
+		{3DCA1B50-E4B4-4052-A5C8-1B7495794137}.Release|Win32.ActiveCfg = Release|Win32
+		{3DCA1B50-E4B4-4052-A5C8-1B7495794137}.Release|Win32.Build.0 = Release|Win32
+		{3DCA1B50-E4B4-4052-A5C8-1B7495794137}.Release|x64.ActiveCfg = Release|x64
+		{3DCA1B50-E4B4-4052-A5C8-1B7495794137}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

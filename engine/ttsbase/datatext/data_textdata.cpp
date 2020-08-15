@@ -41,13 +41,27 @@ namespace cst
             ////
             ////////////////////////////////////////////////////////////////////////////
 
+            bool CTextData::initialize(const DataConfig &dataConfig)
+            {
+                return CDataManager::initialize(dataConfig);
+            }
+
+            bool CTextData::terminate()
+            {
+                if (m_pLexicon)
+                {
+                    m_pLexicon->clear();
+                    delete m_pLexicon;
+                    m_pLexicon = NULL;
+                }
+                return CDataManager::terminate();
+            }
+
             const CLexicon &CTextData::getLexicon() const
             {
-                // This implementation is meaningless!
-                // Just provided to prevent getLexicon() from being abstract.
-                CLexicon *pLexicon = NULL;
-                assert(pLexicon != NULL);
-                return *pLexicon;
+                // assert lexicon is not NULL
+                assert(m_pLexicon != NULL);
+                return *m_pLexicon;
             }
 
         }//namespace base
