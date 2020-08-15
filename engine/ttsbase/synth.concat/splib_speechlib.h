@@ -34,9 +34,7 @@
 #ifndef _CST_TTS_BASE_SPLIB_SPEECHLIB_H_
 #define _CST_TTS_BASE_SPLIB_SPEECHLIB_H_
 
-#include "cmn/cmn_type.h"
-#include <string>
-#include <vector>
+#include "../datavoice/wav_synthesizer.h"
 
 namespace cst
 {
@@ -67,28 +65,8 @@ namespace cst
             ///
             /// @brief  The base implementation interface class for speech library accessing
             ///
-            class CSpeechLib
+            class CSpeechLib : public CWavSynthesizer
             {
-            public:
-                ///
-                /// @brief  The detailed description of the speech library
-                ///
-                /// The languages and the accents must appear in pairs, which means each language must have one accent.
-                /// If there is no (obvious) accent for one language, the accent must be set to "" (empty string).
-                /// For example, "zh-cmn:zh-HK" means the speaker can speak Chinese Putonghua but with Hong Kong accent.
-                /// "zh-yue" means the speaker can speak Chinese Cantonese (does not care about the accent).
-                ///
-                class CDescriptor
-                {
-                public:
-                    wchar_t         chGender;       ///< The gender of the speaker for the speech library
-                    int             nAge;           ///< The age in years (since birth) of the speaker
-                    int             nVariant;       ///< The variant of the other characters of the speaker (e.g. the second male child voice)
-                    std::wstring    wstrName;       ///< The name of the speaker
-                    std::vector<std::wstring> vecLanguage;  ///< The languages which the speaker can speak
-                    std::vector<std::wstring> vecAccent;    ///< The accents of the speaker, corresponding to languages one by one
-                };
-
             public:
                 //////////////////////////////////////////////////////////////////////////
                 //
@@ -99,33 +77,12 @@ namespace cst
                 ///
                 /// @brief  Constructor
                 ///
-                CSpeechLib() : m_bInitialized(false) {}
+                CSpeechLib() : CWavSynthesizer() {}
 
                 ///
                 /// @brief  Destructor
                 ///
-                virtual ~CSpeechLib() {m_bInitialized = false;}
-
-                ///
-                /// @brief  Initialize the speech library module
-                ///
-                /// @param  [in] wstrPath   The path name where speech library data are stored
-                ///
-                /// @return Whether speech library is initialized successfully
-                ///
-                virtual bool initialize(const std::wstring &wstrPath) = 0;
-
-                ///
-                /// @brief  Terminate and free the speech library module, close all the data
-                ///
-                /// @return Whether speech library is terminated successfully
-                ///
-                virtual bool terminate() = 0;
-
-                ///
-                /// @brief  Indicating whether speech library is initialized
-                ///
-                bool isReady() const {return m_bInitialized;}
+                virtual ~CSpeechLib() {}
 
             public:
                 //////////////////////////////////////////////////////////////////////////
@@ -229,36 +186,22 @@ namespace cst
                 ///
                 virtual uint32 getWaveLength(icode_t iCode, uint32 nIndex) const = 0;
 
-            public:
+            private:
                 //////////////////////////////////////////////////////////////////////////
                 //
-                //  Speech library general information manipulation
+                //  Common data manipulation (overrides)
                 //
                 //////////////////////////////////////////////////////////////////////////
 
                 ///
-                /// @brief  Get the detailed description of the speech library
+                /// @brief  Get wave data for the input phoneme
                 ///
-                virtual const CDescriptor &getDescriptor() const {return m_descriptor;}
+                virtual bool getWave(const std::wstring &wstrPhoneme, uint8 *waveData, uint32 &waveLen) const {return false;}
 
                 ///
-                /// @brief  Get the wave sampling rate (samples per second)
+                /// @brief  Get wave length for the input phoneme
                 ///
-                virtual int getSamplesPerSec() const = 0;
-
-                ///
-                /// @brief  Get the wave sampling precision (bits per sample)
-                ///
-                virtual int getBitsPerSample() const = 0;
-
-                ///
-                /// @brief  Get the wave channel number
-                ///
-                virtual int getChannels() const = 0;
-
-            protected:
-                bool m_bInitialized;        ///< Whether the speech library is initialized or not
-                CDescriptor m_descriptor;   ///< The detailed description of the speech library
+                virtual uint32 getWaveLength(const std::wstring &wstrPhoneme) const {return false;}
 
             private:
                 ///

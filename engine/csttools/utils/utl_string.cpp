@@ -48,7 +48,9 @@
 #   include <windows.h>
 #elif defined(WIN32)
 #   include <windows.h>
+# if defined(HKSCS)
 #   include "hkscs04.h" // for HKSCS characters
+# endif
 #elif defined(__GNUC__)
 #   include <iconv.h>
 #else
@@ -594,6 +596,7 @@ namespace cst
                 //size_t iConvLength = HKSCS_Big5ToUnicode41(HKSCS_ERR_INVALID_CHARS, mbstr, (int)mbscnt, wcstr, (int)wcscnt);
                 //return iConvLength;
 
+#if defined(HKSCS)
                 // Load DLL dynamically
                 HINSTANCE hkscs = LoadLibrary(L"hkscs04.dll");
                 if (hkscs)
@@ -613,6 +616,7 @@ namespace cst
                 }
                 // If goes here,
                 // prompt: no HKSCS is supported
+#endif
             }
 #endif
 

@@ -53,9 +53,8 @@ namespace cst
             /// @brief  The class to perform the speech synthesis operation
             ///
             /// The functionality of speech synthesis module is
-            /// (1) to retrieve the raw wave data of a specific unit from speech library for each basic unit,
-            /// (2) to call the prosody modification module to modify the wave data to match the target prosody,
-            /// (3) to concatenate the above wave data to generate the whole wave data.
+            /// (1) to retrieve the raw wave data of a specific unit from wave synthesizer for each basic unit,
+            /// (2) to concatenate the above wave data to generate the whole wave data.
             ///
             class CSynthesize : public CModule
             {
@@ -199,11 +198,8 @@ namespace cst
                 /// It should be noted that the new synthetic wave data is APPENDed to the original data.
                 /// The original data should be KEPT UNCHANGED.
                 ///
-                /// The procedure should retrieve the wave data from speech library,
-                /// perform the prosody modification, and 
+                /// The procedure should retrieve the wave data from wave synthesizer, and
                 /// then append the wave data to generate the whole wave data.
-                ///
-                /// This default implementation will return the input wave data directly WITHOUT prosody modification.
                 ///
                 /// @param  [in]  sentenceInfo  Target basic unit information for a sentence to be synthesized
                 /// @param  [out] waveData      Return the synthetic wave data by APPENDing the new data

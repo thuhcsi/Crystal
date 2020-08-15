@@ -55,10 +55,10 @@ namespace cst
                 waveData.clear();
 
                 // set the wave format
-                const CSpeechLib &splib = getDataManager<CVoiceData>()->getSpeechLib();
-                int samplesPerSec = splib.getSamplesPerSec();
-                int bitsPerSample = splib.getBitsPerSample();
-                int channels      = splib.getChannels();
+                const CWavSynthesizer &wavsyn = getDataManager<CVoiceData>()->getWavSynthesizer();
+                int samplesPerSec = wavsyn.getSamplesPerSec();
+                int bitsPerSample = wavsyn.getBitsPerSample();
+                int channels      = wavsyn.getChannels();
                 waveData.setFormat(samplesPerSec, bitsPerSample, channels);
 
                 // perform synthesis based on the internal data
@@ -320,35 +320,16 @@ namespace cst
 
             int CSynthesize::synthesize(std::vector<CUnitItem> &sentenceInfo, dsp::CWaveData &waveData)
             {
-                const CSpeechLib &splib = getDataManager<CVoiceData>()->getSpeechLib();
-                int samplesPerSec = splib.getSamplesPerSec();
-                int bitsPerSample = splib.getBitsPerSample();
-                int channels      = splib.getChannels();
+                const CWavSynthesizer &wavsyn = getDataManager<CVoiceData>()->getWavSynthesizer();
+                int samplesPerSec = wavsyn.getSamplesPerSec();
+                int bitsPerSample = wavsyn.getBitsPerSample();
+                int channels      = wavsyn.getChannels();
 
                 // navigate all unit or break items
                 dsp::CWaveData waveBuffer;
                 for (std::vector<CUnitItem>::iterator it = sentenceInfo.begin(); it != sentenceInfo.end(); it++)
                 {
                     CUnitItem &tgtUnit = *it;
-
-                    if (!tgtUnit.isBreak)
-                    {
-                        // speech unit selection:
-                        //   the default implementation of unit selection
-                        //   just select the first unit as result
-
-                        // search the speech unit with wave data
-                        uint idx, candNum = splib.getUnitNumber(tgtUnit.phonemeID);
-                        for (idx = 0; idx < candNum; idx ++)
-                            if (splib.getWaveLength(tgtUnit.phonemeID, idx) > 0)
-                                break;
-
-                        // set INVALID_UNITID(-1) if no unit with wave found
-                        if (idx == candNum)
-                            tgtUnit.unitID = INVALID_UNITID;
-                        else
-                            tgtUnit.unitID = idx;
-                    }
 
                     if (tgtUnit.isBreak)
                     {
@@ -359,26 +340,16 @@ namespace cst
                             return ERROR_OUTOFMEMORY;
                         }
                     }
-                    else if (tgtUnit.unitID == INVALID_UNITID)
-                    {
-                        // unit not found in speech library
-                        // fill silence with specified length directly
-                        uint32 silenceLength = (uint32)(tgtUnit.duration / 1000 * samplesPerSec * bitsPerSample * channels / 16) * 2; // align to even
-                        if (!waveData.appendData(NULL, silenceLength))
-                        {
-                            return ERROR_OUTOFMEMORY;
-                        }
-                    }
                     else
                     {
                         // synthesize basic unit
-                        uint32 waveLength = splib.getWaveLength(tgtUnit.phonemeID, tgtUnit.unitID);
+                        uint32 waveLength = wavsyn.getWaveLength(tgtUnit.wstrPhoneme);
                         if (!waveBuffer.resize(waveLength))
                         {
                             return ERROR_OUTOFMEMORY;
                         }
-                        // get data from speech library
-                        if (!splib.getWave(tgtUnit.phonemeID, tgtUnit.unitID, waveBuffer.getData(), waveLength))
+                        // get data
+                        if (!wavsyn.getWave(tgtUnit.wstrPhoneme, waveBuffer.getData(), waveLength))
                         {
                             return ERROR_DATA_READ_FAULT;
                         }

@@ -35,19 +35,13 @@ namespace cst
     {
         namespace base
         {
-            ////////////////////////////////////////////////////////////////////////////
-            //
-            //  Speech library related management
-            //
-            ////////////////////////////////////////////////////////////////////////////
-
-            const CSpeechLib &CVoiceData::getSpeechLib() const
+            const CWavSynthesizer &CVoiceData::getWavSynthesizer() const
             {
                 // This implementation is meaningless!
-                // Just provided to prevent getSpeechLib() from being abstract.
-                CSpeechLib *pSpeechLib = NULL;
-                assert(pSpeechLib != NULL);
-                return *pSpeechLib;
+                // Just provided to prevent getWavSynthesizer() from being abstract.
+                CWavSynthesizer *pWavSynthesizer = NULL;
+                assert(pWavSynthesizer != NULL);
+                return *pWavSynthesizer;
             }
 
         }//namespace base

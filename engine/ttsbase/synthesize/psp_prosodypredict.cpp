@@ -364,20 +364,15 @@ namespace cst
             {
                 // the default implementation of prosody predict just sets the default duration
 
-                const CSpeechLib &splib = getDataManager<CVoiceData>()->getSpeechLib();
-                float bytesPerMilliSecond = splib.getSamplesPerSec() * splib.getBitsPerSample() / 8.0f / 1000;
+                const CWavSynthesizer &wavsyn = getDataManager<CVoiceData>()->getWavSynthesizer();
+                float bytesPerMilliSecond = wavsyn.getSamplesPerSec() * wavsyn.getBitsPerSample() / 8.0f / 1000;
 
                 for (std::vector<CUnitItem>::iterator it = sentenceInfo.begin(); it != sentenceInfo.end(); it++)
                 {
                     CUnitItem &unitInfo = *it;
 
-                    // search the speech unit with wave data
-                    icode_t phonID = splib.getICodeFromPhoneme(unitInfo.wstrPhoneme);
-                    uint32 candNum = splib.getUnitNumber(phonID);
-                    uint32 waveLen = 0;
-                    for (uint32 idx=0; idx<candNum; idx++)
-                        if ( (waveLen = splib.getWaveLength(phonID, idx)) > 0)
-                            break;
+                    // get the wave length
+                    uint32 waveLen = wavsyn.getWaveLength(unitInfo.wstrPhoneme);
 
                     // set default duration
                     unitInfo.duration = waveLen / bytesPerMilliSecond;

@@ -30,7 +30,7 @@
 #define _CST_TTS_BASE_DATA_VOICEDATA_H_
 
 #include "../datamanage/data_datamanager.h"
-#include "splib_speechlib.h"
+#include "wav_synthesizer.h"
 
 namespace cst
 {
@@ -39,7 +39,7 @@ namespace cst
         namespace base
         {
             ///
-            /// @brief  The class for managing the voice data (i.e. speech library, etc)
+            /// @brief  The class for managing the voice data (i.e. wave synthesizer, speech library, etc)
             ///
             class CVoiceData : public CDataManager
             {
@@ -75,9 +75,9 @@ namespace cst
                 }
 
                 ///
-                /// @brief  Get the speech library module
+                /// @brief  Get the wave synthesizer module
                 ///
-                virtual const CSpeechLib &getSpeechLib() const;
+                virtual const CWavSynthesizer &getWavSynthesizer() const;
 
             private:
                 ///

@@ -146,11 +146,11 @@ namespace cst
                 if (!initialized)
                     return ERROR_NOT_INITIALIZED;
 
-                const CSpeechLib &speechLib = dataManager->getSpeechLib();
+                const CWavSynthesizer &wavsyn = dataManager->getWavSynthesizer();
 
-                nChannels      = speechLib.getChannels();
-                nBitsPerSample = speechLib.getBitsPerSample();
-                nSamplesPerSec = speechLib.getSamplesPerSec();
+                nChannels      = wavsyn.getChannels();
+                nBitsPerSample = wavsyn.getBitsPerSample();
+                nSamplesPerSec = wavsyn.getSamplesPerSec();
 
                 return ERROR_SUCCESS;
             }
@@ -202,7 +202,13 @@ namespace cst
 
             base::CDataManager *CreateVoiceData(const base::DataConfig &dataConfig)
             {
-                return new base::CVoiceData();
+                base::CVoiceData *pDataManager = new base::CVoiceData();
+                if (pDataManager == NULL || !pDataManager->initialize(dataConfig))
+                {
+                    delete pDataManager;
+                    pDataManager = NULL;
+                }
+                return pDataManager;
             }
 
             void DeleteVoiceData(base::CDataManager *pDataManager)
