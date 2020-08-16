@@ -35,13 +35,27 @@ namespace cst
     {
         namespace base
         {
+            bool CVoiceData::initialize(const DataConfig &dataConfig)
+            {
+                return CDataManager::initialize(dataConfig);
+            }
+
+            bool CVoiceData::terminate()
+            {
+                if (m_pWavSynthesizer)
+                {
+                    m_pWavSynthesizer->terminate();
+                    delete m_pWavSynthesizer;
+                    m_pWavSynthesizer = NULL;
+                }
+                return CDataManager::terminate();
+            }
+
             const CWavSynthesizer &CVoiceData::getWavSynthesizer() const
             {
-                // This implementation is meaningless!
-                // Just provided to prevent getWavSynthesizer() from being abstract.
-                CWavSynthesizer *pWavSynthesizer = NULL;
-                assert(pWavSynthesizer != NULL);
-                return *pWavSynthesizer;
+                // assert wave synthesizer is not NULL
+                assert(m_pWavSynthesizer != NULL);
+                return *m_pWavSynthesizer;
             }
 
         }//namespace base

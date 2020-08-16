@@ -47,12 +47,12 @@ namespace cst
                 ///
                 /// @brief  Default constructor
                 ///
-                CVoiceData() {}
+                CVoiceData() : m_pWavSynthesizer(NULL) {}
 
                 ///
                 /// @brief  Default destructor
                 ///
-                virtual ~CVoiceData() {}
+                virtual ~CVoiceData() {terminate();}
 
                 ///
                 /// @brief  Initialize the data manager from the configuration information
@@ -61,18 +61,12 @@ namespace cst
                 ///
                 /// @return Whether operation is successful
                 ///
-                virtual bool initialize(const DataConfig &dataConfig)
-                {
-                    return CDataManager::initialize(dataConfig);
-                }
+                virtual bool initialize(const DataConfig &dataConfig);
 
                 ///
                 /// @brief  Terminate (free) the initialized data
                 ///
-                virtual bool terminate()
-                {
-                    return CDataManager::terminate();
-                }
+                virtual bool terminate();
 
                 ///
                 /// @brief  Get the wave synthesizer module
@@ -88,6 +82,9 @@ namespace cst
                 /// @brief  Declared to prevent calling, will not be implemented
                 ///
                 CVoiceData(const CVoiceData &);
+
+            protected:
+                CWavSynthesizer *m_pWavSynthesizer; ///< Wave synthesizer
             };
 
         }//namespace base

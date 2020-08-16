@@ -13,6 +13,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TTSBase.synth.concat", "TTS
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TTSChinese.text", "TTSChinese.text\TTSChinese.text.vcxproj", "{3DCA1B50-E4B4-4052-A5C8-1B7495794137}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TTSChinese.synth.hts", "TTSChinese.synth.hts\TTSChinese.synth.hts.vcxproj", "{E45A2B18-ED16-464E-BDA1-10324109D172}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HTSLib", "HTSLib\HTSLib.vcxproj", "{615074F4-BD8B-4868-890D-69B0CCB9A00F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -69,6 +73,22 @@ Global
 		{3DCA1B50-E4B4-4052-A5C8-1B7495794137}.Release|Win32.Build.0 = Release|Win32
 		{3DCA1B50-E4B4-4052-A5C8-1B7495794137}.Release|x64.ActiveCfg = Release|x64
 		{3DCA1B50-E4B4-4052-A5C8-1B7495794137}.Release|x64.Build.0 = Release|x64
+		{E45A2B18-ED16-464E-BDA1-10324109D172}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E45A2B18-ED16-464E-BDA1-10324109D172}.Debug|Win32.Build.0 = Debug|Win32
+		{E45A2B18-ED16-464E-BDA1-10324109D172}.Debug|x64.ActiveCfg = Debug|x64
+		{E45A2B18-ED16-464E-BDA1-10324109D172}.Debug|x64.Build.0 = Debug|x64
+		{E45A2B18-ED16-464E-BDA1-10324109D172}.Release|Win32.ActiveCfg = Release|Win32
+		{E45A2B18-ED16-464E-BDA1-10324109D172}.Release|Win32.Build.0 = Release|Win32
+		{E45A2B18-ED16-464E-BDA1-10324109D172}.Release|x64.ActiveCfg = Release|x64
+		{E45A2B18-ED16-464E-BDA1-10324109D172}.Release|x64.Build.0 = Release|x64
+		{615074F4-BD8B-4868-890D-69B0CCB9A00F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{615074F4-BD8B-4868-890D-69B0CCB9A00F}.Debug|Win32.Build.0 = Debug|Win32
+		{615074F4-BD8B-4868-890D-69B0CCB9A00F}.Debug|x64.ActiveCfg = Debug|x64
+		{615074F4-BD8B-4868-890D-69B0CCB9A00F}.Debug|x64.Build.0 = Debug|x64
+		{615074F4-BD8B-4868-890D-69B0CCB9A00F}.Release|Win32.ActiveCfg = Release|Win32
+		{615074F4-BD8B-4868-890D-69B0CCB9A00F}.Release|Win32.Build.0 = Release|Win32
+		{615074F4-BD8B-4868-890D-69B0CCB9A00F}.Release|x64.ActiveCfg = Release|x64
+		{615074F4-BD8B-4868-890D-69B0CCB9A00F}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

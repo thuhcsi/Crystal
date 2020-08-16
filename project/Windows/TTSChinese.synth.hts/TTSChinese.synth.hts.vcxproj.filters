@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\utility">
+      <UniqueIdentifier>{25af5a65-064c-4419-872f-f261f74c42c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\synthesize">
+      <UniqueIdentifier>{e73cdbc1-5c09-430a-b710-b3e0443059b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\synthesize">
+      <UniqueIdentifier>{067cc5fd-3f3f-4158-992f-16fc9fd99397}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utility">
+      <UniqueIdentifier>{9e020698-58e0-4cde-89f8-2d2d5bfa49d6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\engine\ttschinese\synth.hts\hts_ssml2lab.h">
+      <Filter>Header Files\synthesize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttschinese\synth.hts\hts_synthesize.h">
+      <Filter>Header Files\synthesize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttschinese\synth.hts\data_voicedata.h">
+      <Filter>Header Files\synthesize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttschinese\synth.hts\tts_synthesizer.h">
+      <Filter>Header Files\synthesize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttschinese\synth.hts\unitseg_unitsegment.h">
+      <Filter>Header Files\synthesize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttschinese\synth.hts\hts_synthesizer.h">
+      <Filter>Header Files\synthesize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttschinese\synth.hts\psp_prosodypredict.h">
+      <Filter>Header Files\synthesize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ttschinese\utility\utl_pinyin.h">
+      <Filter>Header Files\utility</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\engine\ttschinese\synth.hts\hts_ssml2lab.cpp">
+      <Filter>Source Files\synthesize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\ttschinese\synth.hts\hts_synthesize.cpp">
+      <Filter>Source Files\synthesize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\ttschinese\synth.hts\data_voicedata.cpp">
+      <Filter>Source Files\synthesize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\ttschinese\synth.hts\tts_synthesizer.cpp">
+      <Filter>Source Files\synthesize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\ttschinese\synth.hts\unitseg_unitsegment.cpp">
+      <Filter>Source Files\synthesize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\ttschinese\synth.hts\hts_synthesizer.cpp">
+      <Filter>Source Files\synthesize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\ttschinese\synth.hts\psp_prosodypredict.cpp">
+      <Filter>Source Files\synthesize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\ttschinese\utility\utl_pinyin.cpp">
+      <Filter>Source Files\utility</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

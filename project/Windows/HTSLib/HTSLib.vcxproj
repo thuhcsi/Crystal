@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{91F6099F-A00B-44D4-AB44-51316CCDE25B}</ProjectGuid>
-    <RootNamespace>TTSBase</RootNamespace>
+    <ProjectGuid>{615074F4-BD8B-4868-890D-69B0CCB9A00F}</ProjectGuid>
+    <RootNamespace>HTSLib</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -68,16 +68,16 @@
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\..\binary\$(Platform).$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)..\..\binary\object\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\..\binary\object\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tts.synth</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tts.synth</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">tts.synth</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">tts.synth</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">hts</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">hts</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">hts</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">hts</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\..\engine\;$(SolutionDir)..\..\engine\csttools\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -86,15 +86,15 @@
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
     </ClCompile>
-    <ProjectReference>
-      <LinkLibraryDependencies>true</LinkLibraryDependencies>
-    </ProjectReference>
+    <Lib>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\..\engine\;$(SolutionDir)..\..\engine\csttools\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <PrecompiledHeader>
@@ -102,68 +102,55 @@
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
-    <ProjectReference>
-      <LinkLibraryDependencies>true</LinkLibraryDependencies>
-    </ProjectReference>
+    <Lib>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\..\engine\;$(SolutionDir)..\..\engine\csttools\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
-    <ProjectReference>
-      <LinkLibraryDependencies>true</LinkLibraryDependencies>
-    </ProjectReference>
+    <Lib>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\..\engine\;$(SolutionDir)..\..\engine\csttools\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
-    <ProjectReference>
-      <LinkLibraryDependencies>true</LinkLibraryDependencies>
-    </ProjectReference>
+    <Lib>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\engine\ttsbase\datamanage\module_manager.cpp" />
-    <ClCompile Include="..\..\..\engine\ttsbase\synthesize\psp_prosodypredict.cpp" />
-    <ClCompile Include="..\..\..\engine\ttsbase\synthesize\synth_synthesize.cpp" />
-    <ClCompile Include="..\..\..\engine\ttsbase\synthesize\unitseg_unitsegment.cpp" />
-    <ClCompile Include="..\..\..\engine\ttsbase\datamanage\data_datamanager.cpp" />
-    <ClCompile Include="..\..\..\engine\ttsbase\datamanage\data_drivendata.cpp" />
-    <ClCompile Include="..\..\..\engine\ttsbase\datavoice\data_voicedata.cpp" />
-    <ClCompile Include="..\..\..\engine\ttsbase\tts.synth\tts_synthesizer.cpp" />
+    <ClCompile Include="..\..\..\engine\htslib\HTS_audio.c" />
+    <ClCompile Include="..\..\..\engine\htslib\HTS_engine.c" />
+    <ClCompile Include="..\..\..\engine\htslib\HTS_gstream.c" />
+    <ClCompile Include="..\..\..\engine\htslib\HTS_label.c" />
+    <ClCompile Include="..\..\..\engine\htslib\HTS_misc.c" />
+    <ClCompile Include="..\..\..\engine\htslib\HTS_model.c" />
+    <ClCompile Include="..\..\..\engine\htslib\HTS_pstream.c" />
+    <ClCompile Include="..\..\..\engine\htslib\HTS_sstream.c" />
+    <ClCompile Include="..\..\..\engine\htslib\HTS_vocoder.c" />
+    <ClCompile Include="..\..\..\engine\htslib\hts_synthesizer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\engine\ttsbase\datamanage\base_moduleapi.h" />
-    <ClInclude Include="..\..\..\engine\ttsbase\datamanage\module_manager.h" />
-    <ClInclude Include="..\..\..\engine\ttsbase\synthesize\psp_prosodypredict.h" />
-    <ClInclude Include="..\..\..\engine\ttsbase\synthesize\synth_synthesize.h" />
-    <ClInclude Include="..\..\..\engine\ttsbase\synthesize\unitseg_unitsegment.h" />
-    <ClInclude Include="..\..\..\engine\ttsbase\datamanage\base_module.h" />
-    <ClInclude Include="..\..\..\engine\ttsbase\datamanage\base_ttsdocument.h" />
-    <ClInclude Include="..\..\..\engine\ttsbase\datamanage\data_datamanager.h" />
-    <ClInclude Include="..\..\..\engine\ttsbase\datamanage\data_drivendata.h" />
-    <ClInclude Include="..\..\..\engine\ttsbase\datavoice\data_voicedata.h" />
-    <ClInclude Include="..\..\..\engine\ttsbase\datavoice\wav_synthesizer.h" />
-    <ClInclude Include="..\..\..\engine\ttsbase\tts.synth\tts_synthesizer.h" />
+    <ClInclude Include="..\..\..\engine\htslib\HTS_engine.h" />
+    <ClInclude Include="..\..\..\engine\htslib\HTS_hidden.h" />
+    <ClInclude Include="..\..\..\engine\htslib\hts_synthesizer.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CSTTools\CSTTools.vcxproj">
-      <Project>{1cac5b51-67ff-410a-87ad-b96f613761e1}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

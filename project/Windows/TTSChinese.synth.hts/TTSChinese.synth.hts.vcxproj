@@ -19,27 +19,27 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{91F6099F-A00B-44D4-AB44-51316CCDE25B}</ProjectGuid>
-    <RootNamespace>TTSBase</RootNamespace>
+    <ProjectGuid>{E45A2B18-ED16-464E-BDA1-10324109D172}</ProjectGuid>
+    <RootNamespace>TTSChinese</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -68,16 +68,16 @@
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\..\binary\$(Platform).$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)..\..\binary\object\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\..\binary\object\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tts.synth</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tts.synth</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">tts.synth</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">tts.synth</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">zh.hts</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">zh.hts</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">zh.hts</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">zh.hts</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>$(SolutionDir)..\..\engine\;$(SolutionDir)..\..\engine\csttools\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;CSTDLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -89,12 +89,15 @@
     <ProjectReference>
       <LinkLibraryDependencies>true</LinkLibraryDependencies>
     </ProjectReference>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>$(SolutionDir)..\..\engine\;$(SolutionDir)..\..\engine\csttools\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;CSTDLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <PrecompiledHeader>
@@ -105,11 +108,14 @@
     <ProjectReference>
       <LinkLibraryDependencies>true</LinkLibraryDependencies>
     </ProjectReference>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <AdditionalIncludeDirectories>$(SolutionDir)..\..\engine\;$(SolutionDir)..\..\engine\csttools\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;CSTDLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
@@ -122,7 +128,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>$(SolutionDir)..\..\engine\;$(SolutionDir)..\..\engine\csttools\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;CSTDLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
@@ -133,36 +139,34 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\engine\ttsbase\datamanage\module_manager.cpp" />
-    <ClCompile Include="..\..\..\engine\ttsbase\synthesize\psp_prosodypredict.cpp" />
-    <ClCompile Include="..\..\..\engine\ttsbase\synthesize\synth_synthesize.cpp" />
-    <ClCompile Include="..\..\..\engine\ttsbase\synthesize\unitseg_unitsegment.cpp" />
-    <ClCompile Include="..\..\..\engine\ttsbase\datamanage\data_datamanager.cpp" />
-    <ClCompile Include="..\..\..\engine\ttsbase\datamanage\data_drivendata.cpp" />
-    <ClCompile Include="..\..\..\engine\ttsbase\datavoice\data_voicedata.cpp" />
-    <ClCompile Include="..\..\..\engine\ttsbase\tts.synth\tts_synthesizer.cpp" />
+    <ClInclude Include="..\..\..\engine\ttschinese\synth.hts\hts_synthesizer.h" />
+    <ClInclude Include="..\..\..\engine\ttschinese\synth.hts\psp_prosodypredict.h" />
+    <ClInclude Include="..\..\..\engine\ttschinese\synth.hts\unitseg_unitsegment.h" />
+    <ClInclude Include="..\..\..\engine\ttschinese\synth.hts\hts_ssml2lab.h" />
+    <ClInclude Include="..\..\..\engine\ttschinese\synth.hts\hts_synthesize.h" />
+    <ClInclude Include="..\..\..\engine\ttschinese\synth.hts\data_voicedata.h" />
+    <ClInclude Include="..\..\..\engine\ttschinese\synth.hts\tts_synthesizer.h" />
+    <ClInclude Include="..\..\..\engine\ttschinese\utility\utl_pinyin.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\engine\ttsbase\datamanage\base_moduleapi.h" />
-    <ClInclude Include="..\..\..\engine\ttsbase\datamanage\module_manager.h" />
-    <ClInclude Include="..\..\..\engine\ttsbase\synthesize\psp_prosodypredict.h" />
-    <ClInclude Include="..\..\..\engine\ttsbase\synthesize\synth_synthesize.h" />
-    <ClInclude Include="..\..\..\engine\ttsbase\synthesize\unitseg_unitsegment.h" />
-    <ClInclude Include="..\..\..\engine\ttsbase\datamanage\base_module.h" />
-    <ClInclude Include="..\..\..\engine\ttsbase\datamanage\base_ttsdocument.h" />
-    <ClInclude Include="..\..\..\engine\ttsbase\datamanage\data_datamanager.h" />
-    <ClInclude Include="..\..\..\engine\ttsbase\datamanage\data_drivendata.h" />
-    <ClInclude Include="..\..\..\engine\ttsbase\datavoice\data_voicedata.h" />
-    <ClInclude Include="..\..\..\engine\ttsbase\datavoice\wav_synthesizer.h" />
-    <ClInclude Include="..\..\..\engine\ttsbase\tts.synth\tts_synthesizer.h" />
+    <ClCompile Include="..\..\..\engine\ttschinese\synth.hts\hts_synthesizer.cpp" />
+    <ClCompile Include="..\..\..\engine\ttschinese\synth.hts\psp_prosodypredict.cpp" />
+    <ClCompile Include="..\..\..\engine\ttschinese\synth.hts\unitseg_unitsegment.cpp" />
+    <ClCompile Include="..\..\..\engine\ttschinese\synth.hts\hts_ssml2lab.cpp" />
+    <ClCompile Include="..\..\..\engine\ttschinese\synth.hts\hts_synthesize.cpp" />
+    <ClCompile Include="..\..\..\engine\ttschinese\synth.hts\data_voicedata.cpp" />
+    <ClCompile Include="..\..\..\engine\ttschinese\synth.hts\tts_synthesizer.cpp" />
+    <ClCompile Include="..\..\..\engine\ttschinese\utility\utl_pinyin.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CSTTools\CSTTools.vcxproj">
-      <Project>{1cac5b51-67ff-410a-87ad-b96f613761e1}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    <ProjectReference Include="..\HTSLib\HTSLib.vcxproj">
+      <Project>{615074f4-bd8b-4868-890d-69b0ccb9a00f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\TTSBase.synth\TTSBase.synth.vcxproj">
+      <Project>{91f6099f-a00b-44d4-ab44-51316ccde25b}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

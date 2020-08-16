@@ -76,10 +76,7 @@
     <ClInclude Include="..\..\..\engine\ttsbase\datamanage\data_drivendata.h">
       <Filter>Header Files\datamanage</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\engine\ttsbase\datavoice\splib_phonemeset.h">
-      <Filter>Header Files\datavoice</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\engine\ttsbase\datavoice\splib_speechlib.h">
+    <ClInclude Include="..\..\..\engine\ttsbase\datavoice\wav_synthesizer.h">
       <Filter>Header Files\datavoice</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\engine\ttsbase\datavoice\data_voicedata.h">
