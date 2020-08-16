@@ -15,6 +15,16 @@ Please use [the following paper](http://www1.se.cuhk.edu.hk/~hccl/publications/p
 
 - Zhiyong WU, Guangqi CAO, Helen MENG, Lianhong CAI, "A Unified Framework for Multilingual Text-to-Speech Synthesis with SSML Specification as Interface," *Tsinghua Science and Technology*, vol. 14, no. 5, pp. 623-630, October 2009.
 
+### Native Support of SSML
+
+The framework uses Speech Synthesis Markup Language (SSML) specification as interface between different modules.  Hence, the framework provides native support of SSML tags.
+
+Meanwhile, the framework provides **cst::xml::CSSMLTraversal** (*xml/ssml_traversal*) to convert the SSML document into internal data structure for convenient processing.  This means you actually donot need to take care of the complex parsing procedures of SSML document when implementing your own algorithms.  What you need to do is just to implement your algorithms by overriding the functions with internal data structures for the modules in **cst::tts::base::***.
+
+<p align="center">
+  <img width="500" src="./document/docs/ssml_interface.png"/>
+</p> 
+
 ### Support of Dynamic Module Loading & Cross-platform
 
 The framework provides the support of dynamic module loading on different platforms.
@@ -33,7 +43,7 @@ For example, the above left figure shows Concatenative Putonghua TTS engine runn
 You can implement different TTS engines for different languages by overriding the TTSBase moduels in **cst::tts::base::***.  The following figure depicts the multilingual support of the architecture.
 
 <p align="center">
-  <img src="./document/docs/interface.png"/>
+  <img width="500" src="./document/docs/interface.png"/>
 </p> 
 
 
